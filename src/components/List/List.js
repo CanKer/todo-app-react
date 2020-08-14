@@ -14,7 +14,7 @@ const List = ({todoList, handleDelete, handleUpdate }) =>  {
       ))
   return(
     <>
-      <h3>List ToDo</h3>
+      <h3>List ToDo: </h3><small>click on item to "done"</small>
       <hr />
       <ul className="list-group list-group-flush">
       {generateList}

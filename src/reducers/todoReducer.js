@@ -12,6 +12,7 @@ const todoReducer = (state = [], action ) => {
             console.log("newState: ", newState);
             return newState;
         case 'update':
+          console.log("action.payload: ", action.payload)
             return state.map( todo =>
                 ( todo['_id'] === action.payload['_id'] )
                     ? { ...todo, done: !action.payload['done']}

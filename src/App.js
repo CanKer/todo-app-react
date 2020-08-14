@@ -36,6 +36,7 @@ const App = () =>  {
   const handleUpdate = ( todoId ) => {
     TODOService.putTodo(todoId)
       .then(({data}) =>{
+        console.log("data: ", data)
         dispatch({
             type: 'update',
             payload: data

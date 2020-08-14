@@ -16,12 +16,11 @@ class TodoService {
       .catch(err => err)
   }
   putTodo(todo){
-    return fetch.put(`${this.path}/${todo.id}`, todo)
+    return fetch.put(`${this.path}/${todo._id}`, todo)
       .then(res => res)
       .catch(err => err)
   }
   async deleteTodo(id){
-    console.log("delete: ", `${this.path}/${id}`);
     return await fetch.delete(`${this.path}/${id}`)
       .then(res => res)
       .catch(err => err)
